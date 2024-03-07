@@ -1,0 +1,53 @@
+config:
+  target: "http://localhost:3003"
+  phases:
+    - duration: 3
+      arrivalRate: 1
+  engines:
+    socketio-v3: {}
+
+scenarios:
+  - flow:
+      - think: 1
+      - emit:
+          channel: "join_room"
+          data:
+            room: "21955750"
+      - think: 1
+      - emit:
+          channel: "stream_message"
+          data:
+            room: "21955750"
+            message:
+              id: "o3zqcWi5dqal8MWr7qJIt"
+              type: "line"
+              x: 120
+              y: 120
+              width: 60
+              height: 40
+              angle: 0
+              strokeColor: "#000000"
+              backgroundColor: "transparent"
+              fillStyle: "hachure"
+              strokeWidth: 1
+              strokeStyle: "solid"
+              roughness: 0
+              opacity: 100
+              groupIds: []
+              roundness: null
+              seed: 963704093
+              version: 3
+              versionNonce: 1697532285
+              isDeleted: false
+              boundElements: null
+              updated: 1709724533227
+              link: null
+              locked: false
+              points: [[0, 0], [60, 40]]
+              lastCommittedPoint: null
+              startBinding: null
+              endBinding: null
+              startArrowhead: null
+              endArrowhead: null
+              writerId: "119956"
+      - think: 1
